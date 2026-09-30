@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="8tPzF.jpg" type="image/x-jpg">
+    <link rel="stylesheet" href="produits.css">
+    <title>Produits</title>
+</head>
+<body>
+    <div class="transition">
+        
+            <div class="image-transition"></div>
+         
+    </div>
+    <main>
+        <header>
+            <section class="header-layout">
+                <a href="accueil.html" class="logo"></a>
+                <nav>
+                    <a href="accueil.html">Accueil</a>
+                    <a href="produits.html"  class="now">Produits</a>
+                    <a href="apropos.html">À propos</a>
+                </nav>
+                <a class="btn contact">Nous contacter</a>
+                <button class="menu-b">☰</button>
+            </section>
+        </header>
+
+        <aside class="sidebar">
+            <button class="close-btn">
+                ✕
+            </button>
+
+            <nav>
+                <a href="accueil.html">Accueil</a>
+                <a href="produits.html" class="now">Produits</a>
+                <a href="apropos.html">À propos</a>
+                <a class="btn-contact">Nous contacter</a>
+            </nav>
+        </aside> 
+
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="hero-subtitle">Montures • Brumes • Accessoires</p>
+                <h1 class="hero-title">Nos produits</h1>
+                <p class="hero-description">
+                "Découvrez une sélection de lunettes, montres et brumes parfumées pensées pour sublimer votre style."
+                </p>
+            </div>
+        </section>
+        
+
+        <section class="produits-section">
+            <section class="produits-layout">
+                <section class="description-produits">
+                    <h2 class="title">Collection Montures</h2>
+                    <!-- <p>Découvrez notre sélection de lunettes et de montures pour tous les styles. Que vous recherchiez une monture ronde, rectangulaire, pour homme ou pour femme, ou encore des lunettes de soleil, vous trouverez des modèles pensés pour mettre en valeur votre visage et affirmer votre personnalité.</p> -->
+                </section>
+                <div class="visibility-filtres"><i class="fa-solid fa-chevron-down"></i> Afficher filtres et tri</div>
+                <div class="filtres">
+
+                    <!-- GENRE -->
+                    <div class="filtres-genre">
+
+                        <button class="active" data-genre="tous">
+                            Tous
+                        </button>
+
+                        <button data-genre="homme">
+                            Homme
+                        </button>
+
+                        <button data-genre="femme">
+                            Femme
+                        </button>
+
+                        <button data-genre="unisexe">
+                            Unisexe
+                        </button>
+
+                    </div>
+
+
+                    <!-- FORME -->
+                    <div class="filtres-forme">
+
+                        <button class="active" data-forme="toutes">
+                            Toutes les formes
+                        </button>
+
+                        <button data-forme="cat-eye">
+                            cat-eye
+                        </button>
+
+                        <button data-forme="rectangle">
+                            Rectangle
+                        </button>
+
+                        <button data-forme="carree">
+                            Carrée
+                        </button>
+
+                        <button data-forme="ovale">
+                            Ovale
+                        </button>
+
+                    </div>
+
+
+                    <!-- TYPE -->
+                    <div class="filtres-type">
+
+                        <button class="active" data-type="tous">
+                            Tous les types
+                        </button>
+
+                        <button data-type="vue">
+                            Lunettes de vue
+                        </button>
+
+                        <button data-type="soleil">
+                            Lunettes de soleil
+                        </button>
+
+                    </div>
+
+                    <div class="filtres-rim">
+
+                        <button class="active" data-rim="tous">
+                            Tous les cercles
+                        </button>
+
+                        <button data-rim="epais">
+                            epais
+                        </button>
+
+                        <button data-rim="fin">
+                            fins
+                        </button>
+
+                        <button data-rim="sans">
+                            sans
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRI PRIX -->
+
+                <div class="tri-prix">
+
+                    <button class="prix-croissant">
+                        Prix croissant
+                    </button>
+
+                    <button class="prix-decroit">
+                        Prix décroissant
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUITS --> 
+
+                <div class="produits-container" id="lunettes"></div>
+
+                <button class="btnAfficherPlus">
+                    <i class="fa-solid fa-chevron-down"></i> Afficher plus
+                </button>
+
+                <div class="modal">
+
+                    <div class="modal-content">
+
+                        <button class="fermer-modal" >
+                            &times;
+                        </button>
+
+                        <img class="modal-image" src="" alt="">
+
+                        <h2 class="modal-nom"></h2>
+
+                        <p class="modal-categorie"></p>
+
+                        <p class="modal-prix"></p>
+                        
+                        <form class="commande-form">
+
+                            <label for="nom-client">
+                                Nom du client
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nom-client"
+                                placeholder="Entrez votre nom"
+                                required
+                            >
+
+                            <button class="btnValider" type="submit">
+                                Envoyer la commande
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+        <section class="produits-section">
+            <section class="produits-layout">
+                <section class="description-produits">
+                    <h2 class="title">Brumes Parfumées</h2>
+                    <!-- <p>Découvrez notre sélection de lunettes et de montures pour tous les styles. Que vous recherchiez une monture ronde, rectangulaire, pour homme ou pour femme, ou encore des lunettes de soleil, vous trouverez des modèles pensés pour mettre en valeur votre visage et affirmer votre personnalité.</p> -->
+                </section>
+                <!-- TRI PRIX -->
+
+                <div class="tri-prix-brumes">
+
+                    <button class="prix-croissant-brumes">
+                        Prix croissant
+                    </button>
+
+                    <button class="prix-decroit-brumes">
+                        Prix décroissant
+                    </button>
+
+                </div>
+
+                <!-- PRODUITS -->
+
+                <div class="produits-container-brumes" id="brumes"></div>
+
+                <!-- <button class="btnAfficherPlus">
+                    Afficher plus
+                </button> -->
+
+                <!-- <div id="modal" class="modal">
+
+                    <div class="modal-content">
+
+                        <button id="fermer-modal" class="fermer">
+                            &times;
+                        </button>
+
+                        <img id="modal-image" src="" alt="">
+
+                        <h2 id="modal-nom"></h2>
+
+                        <p id="modal-prix"></p>
+
+                        <p id="modal-categorie"></p>
+
+                        <form id="commande-form">
+
+                            <label for="nom-client">
+                                Nom du client
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nom-client"
+                                placeholder="Entrez votre nom"
+                                required
+                            >
+
+                            <button type="submit">
+                                Envoyer la commande
+                            </button>
+
+                        </form>
+
+                    </div> -->
+
+                </div>
+            </section>
+        </section>
+
+        <section class="produits-section">
+            <section class="produits-layout">
+                <section class="description-produits">
+                    <h2 class="title">Collection Montres</h2>
+                    <!-- <p>Découvrez notre sélection de lunettes et de montures pour tous les styles. Que vous recherchiez une monture ronde, rectangulaire, pour homme ou pour femme, ou encore des lunettes de soleil, vous trouverez des modèles pensés pour mettre en valeur votre visage et affirmer votre personnalité.</p> -->
+                </section>
+                <!-- TRI PRIX -->
+
+                <div class="tri-prix-montres">
+
+                    <button class="prix-croissant-montres">
+                        Prix croissant
+                    </button>
+
+                    <button class="prix-decroit-montres">
+                        Prix décroissant
+                    </button>
+
+                </div>
+
+                <!-- PRODUITS -->
+
+                <div class="produits-container-montres" id="montres"></div>
+
+                <!-- <button class="btnAfficherPlus">
+                    Afficher plus
+                </button> -->
+
+                <!-- <div id="modal" class="modal">
+
+                    <div class="modal-content">
+
+                        <button id="fermer-modal" class="fermer">
+                            &times;
+                        </button>
+
+                        <img id="modal-image" src="" alt="">
+
+                        <h2 id="modal-nom"></h2>
+
+                        <p id="modal-prix"></p>
+
+                        <p id="modal-categorie"></p>
+
+                        <form id="commande-form">
+
+                            <label for="nom-client">
+                                Nom du client
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nom-client"
+                                placeholder="Entrez votre nom"
+                                required
+                            >
+
+                            <button type="submit">
+                                Envoyer la commande
+                            </button>
+
+                        </form>
+
+                    </div> -->
+
+                </div>
+            </section>
+        </section>
+
+        <section class="modal-contact">
+            <section class="contact-modal-container">
+                <button class="btnFc">✕</button>
+                <h3>Contact rapide</h3>
+
+                <div class="modal-info-container">
+                    <a href="https://wa.me/22892252525" target="_blank"><i class="fa-brands fa-whatsapp"></i> 92 25 25 25</a>
+                    <a href="tel:+22892252525" target="_blank"><i class="fa-solid fa-phone"></i> 92 25 25 25</a>
+                    <a href="https://www.instagram.com/beauty_and_styleeee/" target="_blank"><i class="fa-brands fa-instagram"></i> @beauty_and_styleeee</a>
+                    <a href="https://www.tiktok.com/@_lunetteriebs" target="_blank"><i class="fa-brands fa-tiktok"></i> @_lunetteriebs</a>
+                </div>
+            </section>
+        </section>
+
+        <section class="commentaires-section">
+            <section class="commentaires-layout">
+                <div class="commentaire-title">
+                    <h2 class="title ">Retours d'expérience de notre clientèle sur nos produits</h2>
+                    <p>Découvrez ce que notre clientèle pense de la qualité de nos produits.</p>
+                </div>
+
+                <section class="commentaires-container">
+                    <div class="commentaire">
+                        <span class="etoiles-span"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        <p>« Coup de cœur absolu pour ma monture Beauty & Style ! Un design ultra-chic qui habille magnifiquement le regard. »</p>
+
+                        <span>-Camille T.</span>
+                    </div>
+
+                    <div class="commentaire">
+                        <span class="etoiles-span"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+
+                        <p>« Légères, solides et terriblement élégantes. Enfin des lunettes qui allient un vrai confort au quotidien à un style irréprochable. »</p>
+
+                        <span>-Sarah B.</span>
+                    </div>
+
+                    <div class="commentaire">
+                        <span class="etoiles-span"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+
+                        <p>« Des montures magnifiques et des détails soignés : mes lunettes Beauty & Style sont devenues mon accessoire mode indispensable ! »</p>
+
+                        <span>-Inès O.</span>
+                    </div>
+                </section>
+
+                <button class="btnAfficherForm"><i class="fa-brands fa-whatsapp"></i> Partager votre expérience via WhatsApp</button>
+
+            </section>
+        </section>
+
+        
+
+        <section class="modal-form">
+            <section class="formulaire-commentaire">
+                <form action="" class="Formulaire">
+                    <div>
+                        <!-- <label for="nom">Nom</label> -->
+                        <input type="text" id="nom" placeholder="Entrer votre nom" class="nomComs" required>
+                    </div>
+
+                    <div>
+                        <!-- <label for="commentaire-area">Entrer votre commentaire</label> -->
+                        <textarea name="commentaire-area" id="commentaire-area" placeholder="Entrer votre commentaire" required></textarea>
+                    </div>
+
+                    <input type="submit" value="Envoyer" id="envoyerComs">
+                        
+                </form>
+                <button class="btnFermerForm">✕</button>
+            </section>
+        </section>
+
+        <footer>
+            <div class="footer-layout">
+                <div class="footer-content brand">
+                    <a href="#" class="footer-logo"></a>
+
+                    <p>
+                        Votre style, votre élégance.
+                    </p>
+                </div>
+
+                <div class="footer-content f-contact">
+                    <h3>Contact</h3>
+                    <a href="tel:+22892252525" target="_blank">     <i class="fa-solid fa-phone"></i>   Téléphone : 92 25 25 25</a>
+                    <a href="https://wa.me/22892252525" target="_blank">    <i class="fa-brands fa-whatsapp"></i>   WhatsApp : 92 25 25 25</a>
+                    <a href="mailto:beautyandstyle005@gmail.com" target="_blank">  <i class="fa-regular fa-envelope"></i>  E-Mail : beautyandstyle005@gmail.com</a>
+                    <a href="https://maps.app.goo.gl/gKyPUTskcTfvd9dEA" target="_blank">    <i class="fa-solid fa-location-dot"></i> Nukafu, Super Taco, a côté de la maison Apsonic</a>
+                </div>
+
+                <div class="footer-content navigation">
+                    <h3>Navigation</h3>
+                    <a href="accueil.html">Accueil</a>
+                    <a href="produits.html">Nos Produits</a>
+                    <a href="apropos.html">À propos</a>
+                </div>
+                
+                <div class="footer-content f-reseaux">
+                    <h3>Suivez-nous</h3>
+                    <a href="https://www.instagram.com/beauty_and_styleeee/" target="_blank">    <i class="fa-brands fa-instagram"></i> @beauty_and_styleeee</a>
+                    <a href="https://www.tiktok.com/@_lunetteriebs" target="_blank">    <i class="fa-brands fa-tiktok"></i> @_lunetteriebs
+</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Beauty & Style — Tous droits réservés.</p>
+                <a href="politique.html">
+                    Informations légales & confidentialité
+                </a>
+                <p>Développé par <a href="https://wa.me/22899723984" target="_blank">ADJ.exe</a></p>
+            </div>
+        </footer>
+    </main>
+    <script src="produitsBD.js"></script>
+    <script src="produitsAPI.js"></script>
+    <script src="produitsAPIB.js"></script>
+    <script src="produitsAPIC.js"></script>
+    <script src="produitsFP.js"></script>
+</body>
+</html>

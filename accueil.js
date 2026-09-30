@@ -1,0 +1,319 @@
+const menuBtn = document.querySelector(".menu-b");
+const closeBtn = document.querySelector(".close-btn");
+const sidebar = document.querySelector(".sidebar");
+const headerC = document.querySelector("header");
+
+// =========================
+// MENU MOBILE
+// =========================
+
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
+
+// =========================
+// HEADER AU SCROLL
+// =========================
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    headerC.classList.add("scrolled");
+  } else {
+    headerC.classList.remove("scrolled");
+  }
+});
+
+// =========================
+// MODALE CONTACT
+// =========================
+
+const btnAfficherForm = document.querySelector(".btnAfficherForm");
+const btnFermerForm = document.querySelector(".btnFermerForm");
+const modalForm = document.querySelector(".modal-form");
+
+// // Si vous avez un deuxième bouton, déclarez-le ici :
+// // const btnContactp = document.querySelector(".btn-contact-p");
+
+btnAfficherForm.addEventListener("click", () => {
+  modalForm.classList.add("active");
+});
+
+btnFermerForm.addEventListener("click", () => {
+  modalForm.classList.remove("active");
+});
+
+// /* Décommentez si btnContactp existe dans votre HTML :
+// btnContactp.addEventListener("click", () => {
+//   modalContact.classList.add("active");
+// });
+// */
+
+// btnFermerContact.addEventListener("click", () => {
+//   modalContact.classList.remove("active");
+// });
+
+const btnAfficherContact = document.querySelector(".contact");
+const btnFermerContact = document.querySelector(".btnFc");
+const modalContact = document.querySelector(".modal-contact");
+const btnContactp = document.querySelector(".btn-contact");
+
+
+btnAfficherContact.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    modalContact.classList.add("active");
+});
+
+btnContactp.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    modalContact.classList.add("active");
+});
+
+btnFermerContact.addEventListener("click", function() {
+    modalContact.classList.remove("active");
+});
+
+
+
+let btnEnvoyerComs = document.querySelector("#envoyerComs")
+
+btnEnvoyerComs.addEventListener("click", (e) =>{
+    e.preventDefault();
+
+    const nomComs = document.querySelector(".nomComs").value
+    const commentaireArea = document.querySelector("#commentaire-area").value
+
+    if (nomComs.trim() === "") {
+        return;
+    }
+
+    if (commentaireArea.trim() === "") {
+        return;
+    }
+
+    const message = `Bonjour Beauty & Style 👋
+
+    Je m'appelle ${nomComs}.
+
+    Avis du client:
+    ${commentaireArea}
+
+    Merci.`;
+
+    const numero = "22892252525";
+
+    const lien = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
+
+    window.open(lien, "_blank");
+
+})
+
+
+
+
+
+
+
+
+
+let produitSelectionne = null;
+const numeroWhatsApp = "22892252525";
+
+
+
+// ================================
+// ELEMENTS HTML
+// ================================
+
+const modal = document.querySelector(".modal");
+
+const fermerModal = document.querySelector(".fermer-modal");
+
+const modalImage = document.querySelector(".modal-image");
+
+const modalNom = document.querySelector(".modal-nom");
+
+const modalPrix = document.querySelector(".modal-prix");
+
+const modalCategorie = document.querySelector(".modal-categorie");
+
+const commandeForm = document.querySelector(".commande-form");
+
+const nomClient = document.querySelector("#nom-client");
+
+const container = document.querySelector(".bestsellers-container");
+
+
+
+
+function afficherProduits() {
+
+    container.innerHTML = "";
+
+
+    for (
+        let i = 0;
+        i < 4;
+        i++
+    ) {
+
+        const produit = produits[i];
+
+
+        const card = document.createElement("div");
+
+        card.classList.add("produit-card");
+
+
+        card.innerHTML = `
+
+            <div
+                class="img-produit"
+                style="background-image: url('${produit.image}')"
+            ><i class="fa-solid fa-glasses"></i></div>
+            
+
+            <h2><i class="fa-solid fa-tag"></i>${produit.prix} FCFA</h2>
+            <p>${produit.genre}, ${produit.forme}, ${produit.type}</p>
+
+
+
+            
+
+        `;
+
+
+        container.appendChild(card);
+
+
+        // Bouton commander
+
+        const boutonCommander =
+            card.querySelector(".btnCommander");
+
+
+        card.addEventListener("click", () => {
+
+            ouvrirModal(produit);
+
+        });
+
+    }
+
+
+    
+
+}
+
+
+
+
+
+
+
+// ================================
+// OUVRIR MODAL
+// ================================
+
+function ouvrirModal(produit) {
+
+
+    produitSelectionne = produit;
+
+
+    modalImage.src = produit.image;
+
+    modalImage.alt = produit.nom;
+
+
+    modalNom.textContent =
+        produit.nom;
+
+
+    modalPrix.textContent =
+        produit.prix + " FCFA";
+
+
+    modal.classList.add("active");
+
+}
+
+
+// ================================
+// FERMER MODAL
+// ================================
+
+fermerModal.addEventListener("click", () => {
+
+    modal.classList.remove("active");
+
+});
+
+
+// ================================
+// COMMANDER SUR WHATSAPP
+// ================================
+
+commandeForm.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+
+    const nom = nomClient.value;
+
+
+    // URL complète de l'image
+
+    const imageUrl = new URL(
+        produitSelectionne.image,
+        window.location.href
+    ).href;
+
+
+    // Message WhatsApp
+
+    const message = `
+Bonjour Beauty & Style 👋
+
+Je souhaite commander :
+
+Produit : ${produitSelectionne.nom}
+Prix : ${produitSelectionne.prix} FCFA
+
+
+Nom du client : ${nom}
+
+Photo du produit :
+${imageUrl}
+`;
+
+
+    const url =
+        `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
+
+
+    window.open(url, "_blank");
+
+});
+
+
+// ================================
+// AFFICHAGE INITIAL
+// ================================
+
+afficherProduits();
+
+window.addEventListener("load", () => {
+
+    const transition = document.querySelector(".transition");
+
+    setTimeout(() => {
+        transition.classList.add("hide");
+    }, 1500);
+
+});
