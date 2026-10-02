@@ -35,8 +35,7 @@ const btnAfficherForm = document.querySelector(".btnAfficherForm");
 const btnFermerForm = document.querySelector(".btnFermerForm");
 const modalForm = document.querySelector(".modal-form");
 
-// // Si vous avez un deuxième bouton, déclarez-le ici :
-// // const btnContactp = document.querySelector(".btn-contact-p");
+
 
 btnAfficherForm.addEventListener("click", () => {
   modalForm.classList.add("active");
@@ -46,15 +45,7 @@ btnFermerForm.addEventListener("click", () => {
   modalForm.classList.remove("active");
 });
 
-// /* Décommentez si btnContactp existe dans votre HTML :
-// btnContactp.addEventListener("click", () => {
-//   modalContact.classList.add("active");
-// });
-// */
 
-// btnFermerContact.addEventListener("click", () => {
-//   modalContact.classList.remove("active");
-// });
 
 const btnAfficherContact = document.querySelector(".contact");
 const btnFermerContact = document.querySelector(".btnFc");
@@ -234,9 +225,11 @@ function ouvrirModal(produit) {
     modalNom.textContent =
         produit.nom;
 
+    modalPrix.innerHTML = '<i class="fa-solid fa-tag"></i>'+ produit.prix + " FCFA";
 
-    modalPrix.textContent =
-        produit.prix + " FCFA";
+
+    modalCategorie.textContent =
+        `${produit.genre} • ${produit.forme} • ${produit.type}`;
 
 
     modal.classList.add("active");
@@ -253,6 +246,12 @@ fermerModal.addEventListener("click", () => {
     modal.classList.remove("active");
 
 });
+
+
+
+
+
+
 
 
 // ================================
@@ -278,19 +277,19 @@ commandeForm.addEventListener("submit", (event) => {
     // Message WhatsApp
 
     const message = `
-Bonjour Beauty & Style 👋
+    Bonjour Beauty & Style 👋
 
-Je souhaite commander :
+    Je souhaite commander :
 
-Produit : ${produitSelectionne.nom}
-Prix : ${produitSelectionne.prix} FCFA
+    Produit : ${produitSelectionne.nom}
+    Prix : ${produitSelectionne.prix} FCFA
 
 
-Nom du client : ${nom}
+    Nom du client : ${nom}
 
-Photo du produit :
-${imageUrl}
-`;
+    Photo du produit :
+    ${imageUrl}
+    `;
 
 
     const url =
@@ -301,6 +300,24 @@ ${imageUrl}
 
 });
 
+// ================================
+// MODAL FULL IMAGE
+// ================================
+
+const modalFullImage = document.querySelector(".modal-full-image")
+const fullImage = document.querySelector(".full-image")
+const closeFullImage = document.querySelector(".fermer-modal-full-image")
+
+
+
+modalImage.addEventListener("click", () => {
+    fullImage.src = modalImage.src;
+    modalFullImage.classList.add("active");
+});
+
+closeFullImage.addEventListener("click", () => {
+    modalFullImage.classList.remove("active");
+})
 
 // ================================
 // AFFICHAGE INITIAL

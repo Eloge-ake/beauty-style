@@ -129,6 +129,29 @@ visibilityFiltres.addEventListener("click", ()=>{
   }
 })
 
+// ================================
+// MODAL FULL IMAGE
+// ================================
+
+const modalFullImage = document.querySelector(".modal-full-image")
+const fullImage = document.querySelector(".full-image")
+const closeFullImage = document.querySelector(".fermer-modal-full-image")
+
+
+
+modalImage.addEventListener("click", () => {
+    fullImage.src = modalImage.src;
+    modalFullImage.classList.add("active");
+});
+
+closeFullImage.addEventListener("click", () => {
+    modalFullImage.classList.remove("active");
+})
+
+// ================================
+// TRANSITION AU CHARGEMENT DE LA PAGE
+// ================================
+
 window.addEventListener("load", () => {
 
     const transition = document.querySelector(".transition");

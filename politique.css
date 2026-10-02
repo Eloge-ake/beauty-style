@@ -59,6 +59,7 @@ a {
 button,
 a {
     -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
 }
 
 /* =========================================================
@@ -267,21 +268,23 @@ header.scrolled nav a.now {
     text-decoration: none;
     font-weight: 500;
 
-    cursor: pointer;
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,
         background 0.3s ease,
+        opacity 0.1s ease,
         color 0.3s ease;
 }
 
 .contact:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+    transform: scale(1.075);
 }
 
 .contact:active {
     transform: scale(0.9);
+    opacity: 0.5;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 header.scrolled .contact {
@@ -289,9 +292,7 @@ header.scrolled .contact {
     color: white;
 }
 
-.btn-contact{
-    cursor: pointer;
-}
+
 
 
 /* =========================================================
@@ -1604,6 +1605,11 @@ label {
 
 
 
+/* =========================================================
+MODAL CONTACT RAPIDE
+========================================================= */
+
+
 .modal-contact{
 
     width: 100%;
@@ -1659,7 +1665,7 @@ label {
     right: 0;
 
     background: #00000000;
-    color: var(--primary-light);
+    
 
     text-align: center;
     text-decoration: none;
@@ -1680,7 +1686,7 @@ label {
 }
 
 .btnFc:active {
-    transform: scale(0.95);
+    transform: scale(0.9);
 }
 
 .modal-contact.active{
@@ -1690,6 +1696,36 @@ label {
     align-items: center;
     gap: 15px;
 }
+
+.contact-rw, .contact-rt, .contact-ri, .contact-rti{
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-rw{
+    background-color: #25d366;
+}
+
+.contact-rt{
+    background-color: cornflowerblue;
+}
+
+.contact-ri{
+    background-color: #e1306c;
+}
+
+.contact-rti{
+    background-color: #161616;
+}
+
+
+
+
+
+
+
 
 .main-section{
     width: 100%;

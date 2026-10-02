@@ -59,6 +59,7 @@ a {
 button,
 a {
     -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
 }
 
 /* =========================================================
@@ -276,15 +277,19 @@ header.scrolled nav a.now {
         transform 0.3s ease,
         box-shadow 0.3s ease,
         background 0.3s ease,
+        opacity 0.1s ease,
         color 0.3s ease;
 }
 
 .contact:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+    transform: scale(1.075);
 }
 
 .contact:active {
     transform: scale(0.9);
+    opacity: 0.5;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 header.scrolled .contact {
@@ -559,6 +564,7 @@ header.scrolled .menu-b {
 
 .hero-btn:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.075);
 }
 
 .hero-btn:active {
@@ -733,14 +739,12 @@ header.scrolled .menu-b {
 
 .bestsellers-section {
     padding: 30px 0 100px;
-    border-radius: 0px 0px 25px 25px;
 }
 
 .bestsellers-layout {
     display: flex;
     flex-direction: column;
     gap: 35px;
-    border-radius: 0px 0px 25px 25px;
 }
 
 .bestsellers-container {
@@ -769,12 +773,10 @@ header.scrolled .menu-b {
 }
 
 .produit-card {
-    /* padding: 8px; */
 
     display: flex;
     flex-direction: column;
 
-    /* border: 1px solid #eee; */
     border-radius: 40px;
 
     background: white;
@@ -784,114 +786,27 @@ header.scrolled .menu-b {
     overflow: hidden;
     cursor: pointer;
 
+    padding: 10px;
+    padding-bottom: 30px;
+
+    /* background-color: #fcf0f5; */
+    color: #300412;
+
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
 
 .produit-card:hover {
-    /* transform: translateY(-8px); */
     box-shadow: var(--shadow-hover);
 }
 
-.produit-img {
-    width: 100%;
-    height: 220px;
 
-    border-radius: 15px;
-
-    background-image:
-        url("WhatsApp Image 2026-08-15 at 23.55.24.jpeg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.produit-card h2{
+    margin-top: 10px;
 }
 
-.produit-nom {
-    margin: 15px 10px 3px;
 
-    font-size: 1rem;
-}
-
-.produit-prix {
-    margin: 0 10px;
-
-    color: var(--primary);
-
-    font-weight: 700;
-}
-
-.btn-acheter {
-    position: relative;
-
-    width: calc(100% - 20px);
-
-    margin: 15px 10px 10px;
-    padding: 14px 20px;
-
-    border-radius: var(--radius-pill);
-
-    background: var(--gradient);
-    color: white;
-
-    text-align: center;
-    text-decoration: none;
-
-    font-size: 0.9rem;
-    font-weight: 600;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.btn-acheter:hover {
-    box-shadow: 0 10px 25px rgba(179, 45, 92, 0.25);
-}
-
-.btn-acheter:active {
-    transform: scale(0.95);
-    box-shadow: 0 10px 25px rgba(179, 45, 92, 0.25);
-}
-
-.btn-acheter::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: -120%;
-
-    width: 60%;
-    height: 100%;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,0.35),
-        transparent
-    );
-
-    transform: skewX(-20deg);
-
-    animation: shine 4s infinite;
-}
-
-@keyframes shine {
-    0% {
-        left: -120%;
-    }
-
-    35% {
-        left: 150%;
-    }
-
-    100% {
-        left: 150%;
-    }
-}
 
 .voir-plus {
     align-self: center;
@@ -906,6 +821,11 @@ header.scrolled .menu-b {
 
     font-size: 0.9rem;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
     transition:
         border 0.3s ease,
         color 0.3s ease,
@@ -915,8 +835,264 @@ header.scrolled .menu-b {
 .voir-plus:hover {
     border-color: var(--primary);
     color: var(--primary);
+}
+
+/* =========================================================
+ MODAL COMMANDER
+========================================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+.modal.active {
+    display: flex;
+}
+
+
+.modal-content {
+    position: relative;
+
+    width: 400px;
+    max-width: 90%;
+
+    background: white;
+
+    padding: 16px;
+
+    border-radius: 40px;
+        color: #300412;
+
+
+    text-align: center;
+}
+
+
+.modal-image {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+}
+
+
+.fermer-modal {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 25px;
+}
+
+
+.commande-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+#nom-client {
+    padding: 12px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+#nom-client:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 4px rgba(179, 45, 92, 0.08);
+}
+
+.btnValider{
+    background: var(--gradient);
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+}
+
+
+.produit-card h2{
+    margin-top: 10px;
+        color:#9b1b4a;
+
+}
+
+
+
+.btnCommander {
+    margin-top: 10px;
+    align-self: center;
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: var(--radius-pill);
+
+    color: var(--text);
+    background-color: transparent;
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition:
+        border 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btnCommander:hover {
+    border-color: var(--primary);
+    background: var(--gradient);
+    color: white;
 
     transform: translateY(-2px);
+}
+
+.img-produit{
+    width: 100%;
+    height: 250px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+   border-radius: 30px;
+   position: relative;
+}
+
+.img-produit i {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    margin: 10px;
+
+    font-size: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    
+    border-radius: 50%;
+}
+
+.modal-full-image{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+
+    inset: 0;
+    z-index: 2000; 
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-full-image.active {
+    display: flex;
+}
+
+.full-image{
+    width: 450px;
+    max-width: 90%;
+
+
+    border-radius: 40px;
+
+}
+
+.fermer-modal-full-image {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 25px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .bestsellers-container {
+        display: flex;
+
+        gap: 20px;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+
+        padding-bottom: 15px;
+    }
+
+    .produit-card {
+        flex: 0 0 40%;
+        scroll-snap-align: start;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .produit-card {
+        flex: 0 0 60%;
+        scroll-snap-align: start;
+    }
+}
+
+@media (max-width: 370px) {
+    #label-nom-client{
+        display: none;
+    }
+    .produit-card {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+    .modal-image{
+        height: 280px;
+    }
 }
 
 
@@ -995,10 +1171,6 @@ header.scrolled .menu-b {
     padding: 10px;
 
     border-radius: 12px;
-
-    /* background: white; */
-
-    /* box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04); */
 }
 
 .avantage i {
@@ -1224,6 +1396,14 @@ header.scrolled .menu-b {
     letter-spacing: 3px;
 }
 
+.etoiles-span{
+    color: #bc416e;
+    margin-bottom: 10px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+
 
 /* =========================================================
    FORMULAIRE COMMENTAIRE
@@ -1281,8 +1461,6 @@ header.scrolled .menu-b {
     gap: 8px;
 }
 
-
-
 .formulaire-commentaire input,
 .formulaire-commentaire textarea {
     width: 100%;
@@ -1334,6 +1512,92 @@ header.scrolled .menu-b {
     transform: scale(0.95);
     /* box-shadow: 0 10px 25px rgba(179, 45, 92, 0.2); */
 }
+
+
+.btnAfficherForm {
+    position: relative;
+
+    /* width: 380px; */
+
+    margin: 15px 10px 10px;
+    padding: 14px 20px;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--gradient);
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    overflow: hidden;
+
+    border: none;
+
+    align-self: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btnAfficherForm:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+    transform: scale(1.075);
+}
+
+.btnAfficherForm:active {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btnFermerForm {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 14px 20px;
+
+    border-radius: var(--radius-pill);
+
+    background-color: #00000000;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    overflow: hidden;
+
+    border: none;
+
+align-self: center;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btnFermerForm:active {
+    transform: scale(0.95);
+}
+
+.modal-form.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
 
 /* =========================================================
    CONTACT
@@ -1745,7 +2009,7 @@ footer {
 
     padding: 70px 0 50px;
 
-    display: grid;
+    display: grid; 
 
     grid-template-columns: 1.4fr 1fr 1fr 1fr;
 
@@ -2196,136 +2460,11 @@ label {
 
 
 
-.etoiles-span{
-    color: #bc416e;
-    margin-bottom: 10px;
-    letter-spacing: 10px;
-    text-align: center;
-}
 
-.btnAfficherForm {
-    position: relative;
+/* =========================================================
+MODAL CONTACT RAPIDE
+========================================================= */
 
-    /* width: 380px; */
-
-    margin: 15px 10px 10px;
-    padding: 14px 20px;
-
-    border-radius: var(--radius-pill);
-
-    background: var(--gradient);
-    color: white;
-
-    text-align: center;
-    text-decoration: none;
-
-    font-size: 0.9rem;
-    font-weight: 600;
-
-    overflow: hidden;
-
-    border: none;
-
-    align-self: center;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.btnAfficherForm:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.btnAfficherForm:active {
-    transform: scale(0.9);
-}
-
-.btnFermerForm {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    padding: 14px 20px;
-
-    border-radius: var(--radius-pill);
-
-    background-color: #00000000;
-
-    text-align: center;
-    text-decoration: none;
-
-    font-size: 0.9rem;
-    font-weight: 600;
-
-    overflow: hidden;
-
-    border: none;
-
-align-self: center;
-    cursor: pointer;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.btnFermerForm:active {
-    transform: scale(0.95);
-}
-
-.modal-form.active{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-/* .brand-container{
-    width: 100%;
-    overflow: hidden;
-}
-
-.our-brands{
-    width: 100%;
-    height: 100px;
-
-    display: flex;
-
-    gap: 50px;
-
-    animation: defilement 10s linear infinite;
-
-}
-
-.brd {
-    background-color: #5a0c22;
-    height: 100%;
-    width: 100px;
-    flex-shrink: 0;
-}
-
-.b1{
-    background-image: url("tstTO.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-}
-
-@keyframes defilement {
-
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(calc(-100%));
-    }
-
-} */
 
 .modal-contact{
 
@@ -2414,8 +2553,28 @@ align-self: center;
     gap: 15px;
 }
 
+.contact-rw, .contact-rt, .contact-ri, .contact-rti{
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-align: center;
+}
 
+.contact-rw{
+    background-color: #25d366;
+}
 
+.contact-rt{
+    background-color: cornflowerblue;
+}
+
+.contact-ri{
+    background-color: #e1306c;
+}
+
+.contact-rti{
+    background-color: #161616;
+}
 
 /* =========================================================
    ACCESSIBILITÉ
@@ -2435,378 +2594,3 @@ align-self: center;
     }
 }
 
-button, a{
-    cursor: pointer;
-}
-
-
-.modal {
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.6);
-
-    display: none;
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
-}
-
-
-.modal.active {
-    display: flex;
-}
-
-
-.modal-content {
-    position: relative;
-
-    width: 400px;
-    max-width: 90%;
-
-    background: white;
-
-    padding: 16px;
-
-    border-radius: 20px;
-}
-
-
-.modal-image {
-    width: 100%;
-    height: 350px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-    background: #ebb3b3;
-}
-
-
-.fermer-modal {
-    position: absolute;
-
-    top: 10px;
-    right: 10px;
-
-    width: 35px;
-    height: 35px;
-
-    border: none;
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    font-size: 25px;
-}
-
-
-.commande-form {
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-
-#nom-client {
-    padding: 12px;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.btnValider, #envoyerComs{
-    background: var(--gradient);
-    color: #ffffff;
-    border: none;
-    padding: 12px;
-    border-radius: 12px;
-}
-
-
-
-.produits-section{
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.produits-layout{
-    width: var(--container);
-    padding: 80px 0px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.description-produits{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-
-    padding-bottom: 50px;
-}
-
-.description-produits .title{
-    font-size: clamp(1.8rem, 2.5vw, 3rem);
-    text-align: center;
-}
-
-.filtres{
-    width: 100%;
-    /* background-color: #fff8f8; */
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-
-    overflow-x: auto;
-    padding: 5px 0px;
-
-}
-
-.filtres button {
-    align-self: center;
-
-    padding: 10px;
-
-    border: 1px solid #ddd;
-    border-radius: var(--radius-pill);
-
-    color: var(--text);
-    text-decoration: none;
-
-    font-size: 0.9rem;
-    cursor: pointer;
-
-    transition:
-        border 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.filtres button:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-
-}
-
-.filtres button:active{
-    transform: scale(0.95);
-}
-
-.filtres button.active {
-    background: var(--gradient);
-    color: #ffffff;
-}
-
-.tri-prix, .tri-prix-brumes, .tri-prix-montres{
-    /* background-color: #fff8f8; */
-    display: flex;
-    gap: 10px;
-
-    overflow-x: auto;
-    padding: 5px 0px;
-}
-
-
-.tri-prix button, .tri-prix-brumes button, .tri-prix-montres button {
-    align-self: center;
-
-    padding: 10px;
-
-    border: 1px solid #ddd;
-    border-radius: var(--radius-pill);
-
-    color: var(--text);
-    text-decoration: none;
-
-    font-size: 0.9rem;
-    cursor: pointer;
-
-    transition:
-        border 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.tri-prix button:hover, .tri-prix-brumes button:hover, .tri-prix-montres button:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
-.tri-prix button:active, .tri-prix-brumes button:active, .tri-prix-montres button:active{
-    transform: scale(0.95);
-}
-
-.tri-prix button.active, .tri-prix-brumes button.active, .tri-prix-montres button.active {
-    background: var(--gradient);
-    color: #ffffff;
-}
-
-.produits-container, .produits-container-brumes, .produits-container-montres{
-    /* background-color: #fff8f8; */
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.produit-card{
-
-    padding: 10px;
-    padding-bottom: 30px;
-
-    /* background-color: #fcf0f5; */
-    color: #300412;
-}
-
-.produit-card h2{
-    margin-top: 10px;
-}
-
-.btnAfficherPlus {
-    align-self: center;
-
-    padding: 10px;
-
-    border: 1px solid #ddd;
-    border-radius: var(--radius-pill);
-
-    color: var(--text);
-    text-decoration: none;
-
-    font-size: 0.9rem;
-
-    transition:
-        border 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.btnAfficherPlus:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-
-    transform: translateY(-2px);
-}
-
-.btnCommander {
-    margin-top: 10px;
-    align-self: center;
-    width: 100%;
-
-    padding: 10px;
-
-    border: 1px solid #ddd;
-    border-radius: var(--radius-pill);
-
-    color: var(--text);
-    background-color: transparent;
-    text-decoration: none;
-
-    font-size: 0.9rem;
-
-    transition:
-        border 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.btnCommander:hover {
-    border-color: var(--primary);
-    background: var(--gradient);
-    color: white;
-
-    transform: translateY(-2px);
-}
-
-.img-produit{
-    width: 100%;
-    height: 250px;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-
-   border-radius: 30px;
-   position: relative;
-}
-
-.img-produit i {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 40px;
-    height: 40px;
-
-    margin: 10px;
-
-    font-size: 1.2rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #fff;
-    
-    border-radius: 50%;
-}
-
-
-
-
-@media (max-width: 1000px) {
-
-    .filtres {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-
-
-    .produits-container, .produits-container-brumes, .produits-container-montres, .bestsellers-container {
-        display: flex;
-
-        gap: 20px;
-
-        overflow-x: auto;
-
-        scroll-snap-type: x mandatory;
-
-        padding-bottom: 15px;
-    }
-
-
-    .produit-card {
-        flex: 0 0 40%;
-        /* width: 200px; */
-        scroll-snap-align: start;
-    }
-
-
-}
-
-@media (max-width: 768px) {
-
-    .modal-image{
-        height: 250px;
-    }
-
-
-    .produit-card {
-        flex: 0 0 60%;
-        /* width: 200px; */
-        scroll-snap-align: start;
-    }
-
-
-}
