@@ -597,9 +597,12 @@ header.scrolled .menu-b {
 }
 
 .title {
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, sans-serif;
+    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     font-weight: 1000;
     letter-spacing: -1px;
+
+    font-style: italic;
 }
 
 .title-categories,

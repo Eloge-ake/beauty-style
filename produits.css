@@ -323,7 +323,7 @@ header.scrolled .menu-b {
     color: var(--text);
 }
 
-
+ 
 /* =========================================================
    SIDEBAR MOBILE
 ========================================================= */
@@ -784,20 +784,29 @@ header.scrolled .menu-b {
     text-align: center;
 }
 
+.filtres-container{
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    border-radius: 40px;
+    padding: 10px;
+    color: var(--primary);
+
+
+}
+
 .visibility-filtres{
     font-size: 1.2rem;
     position: relative;
-    border-radius: 12px;
-    padding:5px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    border-radius: 40px;
+    padding:10px;
+    /* box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06); */
     transition: box-shadow 0.3s ease;
-
+    cursor: pointer;
 
 }
 
-.visibility-filtres:hover{
+/* .visibility-filtres:hover{
     box-shadow: var(--shadow-hover);
-}
+} */
 
 .filtres{
     width: 100%;
@@ -819,12 +828,17 @@ header.scrolled .menu-b {
     align-self: center;
 
     padding: 7.5px;
+    margin: 2.5px;
 
     border: 1px solid #ddd;
     border-radius: var(--radius-pill);
 
     color: var(--text);
     background-color: #00000000;
+
+    border-color: var(--primary);
+    color: var(--primary);
+
     text-decoration: none;
 
     font-size: 0.9rem;
@@ -836,11 +850,11 @@ header.scrolled .menu-b {
         transform 0.3s ease;
 }
 
-.filtres button:hover {
+/* .filtres button:hover {
     border-color: var(--primary);
     color: var(--primary);
 
-}
+} */
 
 .filtres button:active{
     transform: scale(0.95);
@@ -849,6 +863,10 @@ header.scrolled .menu-b {
 .filtres button.active {
     background: var(--gradient);
     color: #ffffff;
+}
+
+.filtres-genre, .filtres-forme, .filtres-types{
+    gap: 10px
 }
 
 .tri-prix, .tri-prix-brumes, .tri-prix-montres{
@@ -883,13 +901,15 @@ header.scrolled .menu-b {
     border: 1px solid #ddd;
     border-radius: var(--radius-pill);
 
-    color: var(--text);
+    border-color: var(--primary);
+    color: var(--primary);
+
     text-decoration: none;
 
     font-size: 0.9rem;
     cursor: pointer;
 
-        background-color: #00000000;
+    background-color: #00000000;
 
 
     transition:
@@ -898,10 +918,10 @@ header.scrolled .menu-b {
         transform 0.3s ease;
 }
 
-.tri-prix button:hover, .tri-prix-brumes button:hover, .tri-prix-montres button:hover {
+/* .tri-prix button:hover, .tri-prix-brumes button:hover, .tri-prix-montres button:hover {
     border-color: var(--primary);
     color: var(--primary);
-}
+} */
 
 .tri-prix button:active, .tri-prix-brumes button:active, .tri-prix-montres button:active{
     transform: scale(0.95);

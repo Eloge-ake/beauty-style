@@ -113,6 +113,10 @@ btnEnvoyerComs.addEventListener("click", (e) =>{
 
 })
 
+// ================================
+// FILTRES ET TRI
+// ================================
+
 const visibilityFiltres = document.querySelector(".visibility-filtres")
 const filtresContainer = document.querySelector(".filtres")
 const triContainer = document.querySelector(".tri-prix")
@@ -123,9 +127,9 @@ visibilityFiltres.addEventListener("click", ()=>{
   triContainer.classList.toggle("active")
 
   if(filtresContainer.classList.contains("active")){
-    visibilityFiltres.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Cacher filtres et tri'
+    visibilityFiltres.innerHTML = '<i class="fa-solid fa-sliders"></i> Filtres et tri <i class="fa-solid fa-chevron-up"></i>'
   }else{
-    visibilityFiltres.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Afficher filtres et tri'
+    visibilityFiltres.innerHTML = '<i class="fa-solid fa-sliders"></i> Filtres et tri <i class="fa-solid fa-chevron-down"></i>'
   }
 })
 

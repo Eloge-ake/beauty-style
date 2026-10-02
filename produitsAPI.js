@@ -80,7 +80,7 @@ let typeChoisi = "tous";
 
 let rimChoisi = "tous";
 
-
+ 
 // ================================
 // AFFICHER LES PRODUITS
 // ================================

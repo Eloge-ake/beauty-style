@@ -68,111 +68,114 @@
                     <h2 class="title">Collection Montures</h2>
                     <!-- <p>Découvrez notre sélection de lunettes et de montures pour tous les styles. Que vous recherchiez une monture ronde, rectangulaire, pour homme ou pour femme, ou encore des lunettes de soleil, vous trouverez des modèles pensés pour mettre en valeur votre visage et affirmer votre personnalité.</p> -->
                 </section>
-                <div class="visibility-filtres"><i class="fa-solid fa-chevron-down"></i> Afficher filtres et tri</div>
-                <div class="filtres">
+                
+                <div class="filtres-container">
+                    <div class="visibility-filtres"><i class="fa-solid fa-sliders"></i> Filtres et tri <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="filtres">
 
-                    <!-- GENRE -->
-                    <div class="filtres-genre">
+                        <!-- GENRE -->
+                        <div class="filtres-genre">
 
-                        <button class="active" data-genre="tous">
-                            Tous
-                        </button>
+                            <button class="active" data-genre="tous">
+                                Tous
+                            </button>
 
-                        <button data-genre="homme">
-                            Homme
-                        </button>
+                            <button data-genre="homme">
+                                Homme
+                            </button>
 
-                        <button data-genre="femme">
-                            Femme
-                        </button>
+                            <button data-genre="femme">
+                                Femme
+                            </button>
 
-                        <button data-genre="unisexe">
-                            Unisexe
-                        </button>
+                            <button data-genre="unisexe">
+                                Unisexe
+                            </button>
+
+                        </div>
+
+
+                        <!-- FORME -->
+                        <div class="filtres-forme">
+
+                            <button class="active" data-forme="toutes">
+                                Toutes les formes
+                            </button>
+
+                            <button data-forme="cat-eye">
+                                cat-eye
+                            </button>
+
+                            <button data-forme="rectangle">
+                                Rectangle
+                            </button>
+
+                            <button data-forme="carree">
+                                Carrée
+                            </button>
+
+                            <button data-forme="ovale">
+                                Ovale
+                            </button>
+
+                        </div>
+
+
+                        <!-- TYPE -->
+                        <div class="filtres-type">
+
+                            <button class="active" data-type="tous">
+                                Tous les types
+                            </button>
+
+                            <button data-type="simple">
+                                Montures simples
+                            </button>
+
+                            <button data-type="soleil">
+                                Lunettes de soleil
+                            </button>
+
+                        </div>
+
+                        <div class="filtres-rim">
+
+                            <button class="active" data-rim="tous">
+                                Tous les cercles
+                            </button>
+
+                            <button data-rim="epais">
+                                epais
+                            </button>
+
+                            <button data-rim="fin">
+                                fins
+                            </button>
+
+                            <button data-rim="sans">
+                                sans
+                            </button>
+
+                        </div>
 
                     </div>
 
 
-                    <!-- FORME -->
-                    <div class="filtres-forme">
+                    <!-- TRI PRIX -->
 
-                        <button class="active" data-forme="toutes">
-                            Toutes les formes
+                    <div class="tri-prix">
+
+                        <button class="prix-croissant">
+                            Prix croissant
                         </button>
 
-                        <button data-forme="cat-eye">
-                            cat-eye
-                        </button>
-
-                        <button data-forme="rectangle">
-                            Rectangle
-                        </button>
-
-                        <button data-forme="carree">
-                            Carrée
-                        </button>
-
-                        <button data-forme="ovale">
-                            Ovale
-                        </button>
-
-                    </div>
-
-
-                    <!-- TYPE -->
-                    <div class="filtres-type">
-
-                        <button class="active" data-type="tous">
-                            Tous les types
-                        </button>
-
-                        <button data-type="vue">
-                            Lunettes de vue
-                        </button>
-
-                        <button data-type="soleil">
-                            Lunettes de soleil
-                        </button>
-
-                    </div>
-
-                    <div class="filtres-rim">
-
-                        <button class="active" data-rim="tous">
-                            Tous les cercles
-                        </button>
-
-                        <button data-rim="epais">
-                            epais
-                        </button>
-
-                        <button data-rim="fin">
-                            fins
-                        </button>
-
-                        <button data-rim="sans">
-                            sans
+                        <button class="prix-decroit">
+                            Prix décroissant
                         </button>
 
                     </div>
 
                 </div>
-
-
-                <!-- TRI PRIX -->
-
-                <div class="tri-prix">
-
-                    <button class="prix-croissant">
-                        Prix croissant
-                    </button>
-
-                    <button class="prix-decroit">
-                        Prix décroissant
-                    </button>
-
-                </div>
-
 
                 <!-- PRODUITS --> 
 
@@ -202,7 +205,7 @@
 
                             <label for="nom-client">
                                 Nom du client :
-                            </label>
+                            </label> 
 
                             <input
                                 type="text"

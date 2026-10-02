@@ -5,7 +5,7 @@ const produits = [
         prix: 25000,
         genre: "femme",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/lunette-Burberry.jpeg"
     },
@@ -16,7 +16,7 @@ const produits = [
         prix: 30000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/cate-eye-tiffany&co.jpeg"
     },
@@ -27,7 +27,7 @@ const produits = [
         prix: 20000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/chopard-cat-eye.jpeg"
     },
@@ -49,7 +49,7 @@ const produits = [
         prix: 28000,
         genre: "femme",
         forme: "rectangle",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/valentino-ronde-rectangle.jpeg"
     },
@@ -60,7 +60,7 @@ const produits = [
         prix: 40000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/prada-carree.jpeg"
     },
@@ -71,7 +71,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/chanel-pantos.jpeg"
     },
@@ -93,7 +93,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "rectangle",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/emperio-armani-rectangle.jpeg"
     },
@@ -104,7 +104,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "rectangle",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/prada-rectangle-unisex.jpeg"
     },
@@ -115,7 +115,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "rectangle",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/valentino-rectangle-femme.jpeg"
     },
@@ -126,7 +126,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/balmain-paris-carre.jpeg"
     },
@@ -137,7 +137,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/prada-carree-unisex.jpeg"
     },
@@ -148,7 +148,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/bvlgari-cat-eye.jpeg"
     },
@@ -159,7 +159,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "carree",
-        type: "soleil",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/dolce&gabana-carree.jpeg"
     },
@@ -170,7 +170,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/chopard-carree.jpeg"
     },
@@ -192,7 +192,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/off-White-carree.jpeg"
     },
@@ -225,7 +225,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/chopard-carree-vue.jpeg"
     },
@@ -247,7 +247,7 @@ const produits = [
         prix: 32000,
         genre: "homme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/bvlgari-cat-eye-vue.jpeg"
     },
@@ -258,7 +258,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/channel-cat-eye-vue.jpeg"
     },
@@ -269,7 +269,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "fin",
         image: "images/lunettes/carree-prada-vue.jpeg"
     },
@@ -280,7 +280,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/dior-cat-eye-vue.jpeg"
     },
@@ -291,7 +291,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/chanel-carree-vue.jpeg"
     },
@@ -302,7 +302,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "fin",
         image: "images/lunettes/tiffany&co-vue-femme.jpeg"
     },
@@ -313,7 +313,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/MARC-JACOB-vue-carree.jpeg"
     },
@@ -324,7 +324,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/cat-eye-chopard.jpeg"
     },
@@ -335,7 +335,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/carree-versace-vue.jpeg"
     },
@@ -346,7 +346,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "rectangle",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/rectangle-valentino.jpeg"
     },
@@ -357,7 +357,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/fendi-carree-vue.jpeg"
     },
@@ -379,7 +379,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "sans",
         image: "images/lunettes/bvlgari-carre-cat-eye.jpeg"
     },
@@ -390,7 +390,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "rectangle",
-        type: "vue",
+        type: "simple",
         rim: "sans",
         image: "images/lunettes/carre-cartier-rimless.jpeg"
     },
@@ -401,7 +401,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/carree-vue.jpg"
     },
@@ -412,7 +412,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "fin",
         image: "images/lunettes/carree-vue-bord-fin.jpg"
     },
@@ -423,7 +423,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "carree",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/carree-vue-simple.jpg"
     },
@@ -445,7 +445,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "fin",
         image: "images/lunettes/cat-eye-vue-fin.jpg"
     },
@@ -456,7 +456,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/cat-eye-vue-noir.jpg"
     },
@@ -467,7 +467,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "rectangle",
-        type: "vue",
+        type: "simple",
         rim: "sans",
         image: "images/lunettes/dior-rimless-rectangle.jpeg"
     },
@@ -478,7 +478,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "fin",
         image: "images/lunettes/fin-vue-simple-uv400.jpg"
     },
@@ -489,7 +489,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/rose-vue-simple.jpg"
     },
@@ -500,7 +500,7 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "epais",
         image: "images/lunettes/cat-eye-noir-vue.jpg"
     },
@@ -544,7 +544,7 @@ const produits = [
         prix: 32000,
         genre: "femme",
         forme: "cat-eye",
-        type: "vue",
+        type: "simple",
         rim: "fin",
         image: "images/lunettes/pantos-vue-simple.jpg"
     },
@@ -577,11 +577,12 @@ const produits = [
         prix: 32000,
         genre: "unisexe",
         forme: "ovale",
-        type: "vue",
+        type: "simple",
         rim: "fin",
         image: "images/lunettes/miu-miu-ovale.jpg"
     }
 ];
+
 
 
 
