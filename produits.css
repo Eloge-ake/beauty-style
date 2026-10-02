@@ -614,9 +614,20 @@ header.scrolled .menu-b {
 }
 
 .title {
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, sans-serif;
+    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     font-weight: 1000;
     letter-spacing: -1px;
+
+    font-style: italic;
+    color: #440d21;
+}
+
+.contact-fast{
+        font-family:'Times New Roman', Times, sans-serif;
+
+    font-style: italic;
+    color: #440d21;
 }
 
 .title-categories,
@@ -626,125 +637,6 @@ header.scrolled .menu-b {
 }
 
 
-/* =========================================================
-   CATEGORIES
-========================================================= */
-
-.categories-section {
-    padding: 70px 0 90px;
-}
-
-.categories-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-.categories-titles {
-    text-align: center;
-}
-
-.categories {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.categorie {
-    position: relative;
-
-    min-height: 250px;
-
-    padding: 25px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-
-    border-radius: var(--radius);
-
-    color: white;
-    text-decoration: none;
-
-    overflow: hidden;
-
-    box-shadow: var(--shadow);
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-.categorie:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
-}
-
-.categorie::after {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.65),
-        transparent 65%
-    );
-
-    transition: opacity 0.4s ease;
-}
-
-.categorie:hover::after {
-    opacity: 0.85;
-}
-
-.categorie > div:last-child {
-    position: relative;
-    z-index: 3;
-}
-
-.categorie-titre {
-    margin-bottom: 5px;
-
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.mini-p {
-    color: rgba(255, 255, 255, 0.85);
-
-    font-size: 0.9rem;
-}
-
-
-/* Images */
-
-.img1,
-.img2,
-.img3 {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.img1 {
-    background-image:
-        url("WhatsApp Image 2026-08-15 at 23.55.33 (1).jpeg");
-}
-
-.img2 {
-    background-image:
-        url("WhatsApp Image 2026-08-15 at 23.55.31 (1).jpeg");
-}
-
-.img3 {
-    background-image:
-        url("WhatsApp Image 2026-08-15 at 23.55.24.jpeg");
-}
 
 
 /* =========================================================
@@ -976,9 +868,13 @@ header.scrolled .menu-b {
     box-shadow: var(--shadow-hover);
 }
 
+
 .produit-card h2{
     margin-top: 10px;
     color:#9b1b4a;
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .btnAfficherPlus {
