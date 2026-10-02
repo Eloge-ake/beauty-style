@@ -561,34 +561,7 @@ header.scrolled .menu-b {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.vd {
-    width: 52px;
-    height: 52px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--text);
-
-    text-decoration: none;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.vd:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.vd:active {
-    transform: scale(0.9);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
 
 
 /* =========================================================
@@ -622,13 +595,7 @@ header.scrolled .menu-b {
     font-style: italic;
     color: #440d21;
 }
-
-.contact-fast{
-        font-family:'Times New Roman', Times, sans-serif;
-
-    font-style: italic;
-    color: #440d21;
-}
+ 
 
 .title-categories,
 .title-bestsellers {
