@@ -580,6 +580,226 @@ const produits = [
         type: "simple",
         rim: "fin",
         image: "images/lunettes/miu-miu-ovale.jpg"
+    },
+
+    {
+        id: 53,
+        nom: "TIFFANY&Co",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/tiffany&co-rose-carree.jpeg"
+    },
+
+    {
+        id: 54,
+        nom: "TIFFANY&Co",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/tiffany&co-jaune-carre-vue.jpeg"
+    },
+
+    {
+        id: 55,
+        nom: "TIFFANY&Co",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/tiffany&co-carree-noir.jpeg"
+    }, 
+
+    {
+        id: 56,
+        nom: "PRADA",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "cat-eye",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/prada-cat-eye-epais-cafe.jpeg"
+    },
+
+    {
+        id: 57,
+        nom: "miu miu",
+        prix: 32000,
+        genre: "femme",
+        forme: "cat-eye",
+        type: "simple",
+        rim: "fin",
+        image: "images/lunettes/miu-miu-cat-eye-vue.jpeg"
+    },
+
+    {
+        id: 58,
+        nom: "FENDI",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/fendi-carree-cafe.jpeg"
+    },
+
+    {
+        id: 59,
+        nom: "DOLCE&GABANA",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "fin",
+        image: "images/lunettes/dolce&gabana-fin-carree-vue.jpeg"
+    },
+
+    {
+        id: 60,
+        nom: "Chopard",
+        prix: 32000,
+        genre: "femme",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chopard-rose-sombre-carree.jpeg"
+    },
+
+    {
+        id: 61,
+        nom: "Chopard",
+        prix: 32000,
+        genre: "femme",
+        forme: "cat-eye",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chopard-cat-eye-vert.jpeg"
+    },
+
+    {
+        id: 62,
+        nom: "Chopard",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chopard-carree-epais-m.jpeg"
+    },
+
+    {
+        id: 63,
+        nom: "Chopard",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chopard-carree-colore-vue.jpeg"
+    },
+
+    {
+        id: 64,
+        nom: "Chopard",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chopard-carree-arrondi-transparent-vue.jpeg"
+    },
+
+    {
+        id: 65,
+        nom: "Chopard",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chopard-carre-arrondi-vue-epais.jpeg"
+    },
+
+    {
+        id: 66,
+        nom: "Chopard",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "cat-eye",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chopard-bleu-violet-cat-eye.jpeg"
+    },
+
+    {
+        id: 67,
+        nom: "CHANEL",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chanel-rose-carre.jpeg"
+    },
+
+    {
+        id: 68,
+        nom: "CHANEL",
+        prix: 32000,
+        genre: "femme",
+        forme: "cat-eye",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chanel-cat-eye-vue-epais-joli.jpeg"
+    },
+
+    {
+        id: 69,
+        nom: "CHANEL",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/chanel-carree-epais-vue-sombre.jpeg"
+    },
+
+    {
+        id: 70,
+        nom: "Celine",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "cat-eye",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/celine-epais-cat-eye.jpeg"
+    },
+
+    {
+        id: 71,
+        nom: "Celine",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/celine-carree-colore-rose-epais.jpeg"
+    },
+
+    {
+        id: 72,
+        nom: "Monture rouge",
+        prix: 32000,
+        genre: "unisexe",
+        forme: "carree",
+        type: "simple",
+        rim: "epais",
+        image: "images/lunettes/carree-epais-rouge.jpeg"
     }
 ];
 
