@@ -451,7 +451,7 @@ header.scrolled .menu-b {
     align-items: center;
 
     background-image:
-        url("ChatGPT Image 23 août 2026, 13_27_11.png");
+        url("images/assets-images/hero-image-1.png");
 
     background-size: cover;
     background-position: center;
@@ -561,6 +561,65 @@ header.scrolled .menu-b {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* =========================================================
+   Defilement
+========================================================= */
+
+.logos {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 25px 0;
+}
+
+.logos-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+
+    gap: 100px;
+    animation: defilement 25s linear infinite;
+    transition: all 0.3s ease;
+}
+
+.logos-track img {
+    width: 220px;
+    height: 110px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.logos-track img:hover {
+    opacity: 1;
+}
+
+@keyframes defilement {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logos-track img{
+        width: 120px;
+        height: 60px;
+    }
+
+    .logos-track {
+        
+
+        gap: 50px;
+    }
+}
+
 
 
 
@@ -602,6 +661,7 @@ header.scrolled .menu-b {
     font-size: clamp(2rem, 3vw, 3.5rem);
     position: relative;
 }
+
 
 
 

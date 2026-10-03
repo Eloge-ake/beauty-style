@@ -460,7 +460,7 @@ header.scrolled .menu-b {
     align-items: center;
 
     background-image:
-        url("ChatGPT Image 23 août 2026, 13_27_11.png");
+        url("images/assets-images/hero-image-1.png");
 
     background-size: cover;
     background-position: center;
@@ -472,7 +472,30 @@ header.scrolled .menu-b {
     overflow: hidden;
 
     border-radius: 0px 0px 25px 25px;
+
+    /* animation: changerImage 20s infinite; */
+
 }
+
+/* @keyframes changerImage {
+
+    0%, 20% {
+        background-image: url("WhatsApp Image 2026-08-15 at 23.55.21.jpeg");
+    }
+
+    25%, 45% {
+        background-image: url("WhatsApp Image 2026-08-15 at 23.55.24.jpeg");
+    }
+
+    50%, 70% {
+        background-image: url("WhatsApp Image 2026-08-15 at 23.55.31 (1).jpeg");
+    }
+
+    75%, 95% {
+        background-image: url("WhatsApp Image 2026-08-15 at 23.55.33 (1).jpeg");
+    }
+
+} */
 
 .hero-overlay {
     position: absolute;
@@ -571,6 +594,65 @@ header.scrolled .menu-b {
     transform: scale(0.9);
     opacity: 0.5;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   Defilement
+========================================================= */
+
+.logos {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 25px 0;
+}
+
+.logos-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+
+    gap: 100px;
+    animation: defilement 25s linear infinite;
+    transition: all 0.3s ease;
+}
+
+.logos-track img {
+    width: 220px;
+    height: 110px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.logos-track img:hover {
+    opacity: 1;
+}
+
+@keyframes defilement {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logos-track img{
+        width: 120px;
+        height: 60px;
+    }
+
+    .logos-track {
+        
+
+        gap: 50px;
+    }
 }
 
 
@@ -723,19 +805,80 @@ header.scrolled .menu-b {
 
 .img1 {
     background-image:
-        url("WhatsApp Image 2026-08-15 at 23.55.33 (1).jpeg");
+        url("images/categories/lunettes2.jpeg");
+
+    animation: changerImage1 30s infinite;
+}
+
+@keyframes changerImage1 {
+
+    0%, 30% {
+        background-image: url("images/categories/lunettes2.jpeg");
+    }
+
+    35%, 65% {
+        background-image: url("images/categories/lunettes3.jpeg");
+    }
+
+    70%, 95% {
+        background-image: url("images/categories/lunettes1.jpeg");
+    }
+
 }
 
 .img2 {
     background-image:
-        url("WhatsApp Image 2026-08-15 at 23.55.31 (1).jpeg");
+        url("images/categories/brumes1.jpeg");
+
+    animation: changerImage2 32s infinite;
+}
+
+@keyframes changerImage2 {
+
+    0%, 20% {
+        background-image: url("images/categories/brumes1.jpeg");
+    }
+
+    25%, 45% {
+        background-image: url("images/categories/brumes(1).png");
+    }
+
+    50%, 70% {
+        background-image: url("images/categories/brumes(2).png");
+    }
+
+    75%, 100% {
+        background-image: url("images/categories/brumes(3).png");
+    }
+
 }
 
 .img3 {
     background-image:
-        url("WhatsApp Image 2026-08-15 at 23.55.24.jpeg");
+        url("images/categories/montres1.jpeg");
+
+    animation: changerImage3 34s infinite;
 }
 
+@keyframes changerImage3 {
+
+    0%, 20% {
+        background-image: url("images/categories/montres (1).jpg");
+    }
+
+    25%, 45% {
+        background-image: url("images/categories/montres (2).jpg");
+    }
+
+    50%, 70% {
+        background-image: url("images/categories/montres (3).jpg");
+    }
+
+    75%, 100% {
+        background-image: url("images/categories/montres (4).jpg");
+    }
+
+}
 
 /* =========================================================
    BESTSELLERS
