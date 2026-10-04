@@ -109,6 +109,8 @@ function afficherProduits() {
             <div
                 class="img-produit"
                 style="background-image: url('${produit.image}')"
+                role="img"
+                aria-label="${produit.nom}, ${produit.genre}, ${produit.forme}, ${produit.type}, ${produit.rim}"
             ><i class="fa-solid fa-glasses"></i></div>
 
             <h2><i class="fa-solid fa-tag"></i>${produit.prix} FCFA</h2>
@@ -450,7 +452,9 @@ function ouvrirModal(produit) {
 
     modalImage.src = produit.image;
 
-    modalImage.alt = produit.nom;
+    const produitAlt = produit.nom + ", " + produit.genre + ", " + produit.forme + ", " + produit.type + ", " + produit.rim;
+
+    modalImage.alt = produitAlt;
 
 
     modalNom.textContent =
