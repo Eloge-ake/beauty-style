@@ -697,7 +697,7 @@ header.scrolled .menu-b {
 
     color: var(--white);
     background: var(--gradient);
-    border-radius: 12px;
+    border-radius: 30px;
     padding: 5px;
 }
 
