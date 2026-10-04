@@ -506,6 +506,9 @@ commandeForm.addEventListener("submit", (event) => {
     const message = `
 Bonjour Beauty & Style 👋
 
+Nom du client : ${nom}
+
+
 Je souhaite commander :
 
 Produit : ${produitSelectionne.nom}
@@ -515,7 +518,6 @@ Genre : ${produitSelectionne.genre}
 Forme : ${produitSelectionne.forme}
 Type : ${produitSelectionne.type}
 
-Nom du client : ${nom}
 
 Photo du produit :
 ${imageUrl}
@@ -527,6 +529,21 @@ ${imageUrl}
 
 
     window.open(url, "_blank");
+
+    // ================================
+    // MODAL THANKS
+    // ================================
+
+    const modalThanks = document.querySelector(".thanks-modal");
+    modalThanks.classList.add("active");
+
+    const fermerThanks = document.querySelector(".fermer-modal-thanks");
+    fermerThanks.addEventListener("click", () => {
+        modalThanks.classList.remove("active");
+    });
+
+    const thanksText = document.querySelector(".thanks-text");
+    thanksText.textContent = `Merci ${nom} pour votre commande ! Nous vous contacterons bientôt via WhatsApp.`;
 
 });
 
