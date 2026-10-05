@@ -1,6 +1,6 @@
 const produits = [
     {
-        id: 91,
+        id: 90,
         nom: "BVLGARI",
         prix: 32000,
         genre: "unisexe",
@@ -11,7 +11,7 @@ const produits = [
     },
 
     {
-        id: 90,
+        id: 89,
         nom: "CELINE",
         prix: 32000,
         genre: "unisexe",
@@ -21,16 +21,7 @@ const produits = [
         image: "images/lunettes/celine-carree-epais-colore.jpeg"
     },
 
-    {
-        id: 89,
-        nom: "Monture rouge",
-        prix: 32000,
-        genre: "unisexe",
-        forme: "carree",
-        type: "simple",
-        rim: "epais",
-        image: "images/lunettes/carree-rouge.jpeg"
-    },
+    
 
     {
         id: 88,
@@ -98,16 +89,16 @@ const produits = [
         image: "images/lunettes/carree-noir-rr-vue.jpeg"
     },
 
-    {
-        id: 82,
-        nom: "MARC JACOBS",
-        prix: 32000,
-        genre: "unisexe",
-        forme: "carree",
-        type: "simple",
-        rim: "epais",
-        image: "images/lunettes/carree-vue-epais-in.jpeg"
-    },
+    // {
+    //     id: 82,
+    //     nom: "MARC JACOBS",
+    //     prix: 32000,
+    //     genre: "unisexe",
+    //     forme: "carree",
+    //     type: "simple",
+    //     rim: "epais",
+    //     image: "images/lunettes/carree-vue-epais-in.jpeg"
+    // },
 
     {
         id: 81,
@@ -150,7 +141,7 @@ const produits = [
         forme: "carree",
         type: "simple",
         rim: "epais",
-        image: "images/lunettes/cat-eye-noir-marc-jacob.jpeg"
+        image: "images/lunettes/carree-vue-epais-cafe.jpeg"
     },
 
     {
